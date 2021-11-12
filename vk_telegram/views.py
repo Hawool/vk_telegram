@@ -8,9 +8,10 @@ from vk_telegram.serializers import MessageOnWallSerializer
 
 
 def send_to_telegram(text: str):
-    token = "2138321296:AAE3D6WoofLImmgCEPn1-6n9YXuokr1QJ4c"
+    """Send message to telegram chat"""
+    token = "xxxxxxx"
     url = "https://api.telegram.org/bot"
-    channel_id = "-1001703747250"
+    channel_id = "-0000000"
     url += token
     url += "/sendMessage"
 
@@ -19,10 +20,11 @@ def send_to_telegram(text: str):
          "text": text
           })
 
-    return r
+    return r.status_code
 
 
 def get_username_from_vk(user_vk_id):
+    """Get user full name from VK"""
     token = 'xxxxxx'
     v = '5.131'
     r = requests.get(

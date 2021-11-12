@@ -4,8 +4,8 @@ from django.db import models
 class MessageOnWall(models.Model):
     type = models.CharField(max_length=255)
     object = models.TextField()
-    message = models.TextField(null=True, blank=True)
-    user_name = models.CharField(max_length=255, null=True, blank=True)
+    message = models.TextField()
+    user_name = models.CharField(max_length=255)
     group_id = models.IntegerField()
     message_date = models.DateField(auto_now_add=True)
 

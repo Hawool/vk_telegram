@@ -41,6 +41,8 @@ def get_username_from_vk(user_vk_id):
 class CreateView(APIView):
 
     def post(self, request):
+        if request.data['type'] not in ['wall_post_new', 'wall_repost']:
+            Response(status=status.HTTP_400_BAD_REQUEST)
         user_vk_id = request.data['object']['user_id']
         message = request.data['object']['text']
         data = request.data

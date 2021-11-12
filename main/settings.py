@@ -93,16 +93,6 @@ DATABASES = {
 #         'PORT': 5432,
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'weather_db',
-#         'USER': 'w_user',
-#         'PASSWORD': 'w_user',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
 
 
 # Password validation

@@ -59,7 +59,7 @@ class CreateView(APIView):
         if serializer.is_valid():
             serializer.save()
 
-        text = f'{user_full_name}, оставил запись: {message}'
+        text = f'Пишет новый пользователь {user_full_name}: {message}'
 
         if send_to_telegram(text) != 200:
             Response(status=status.HTTP_400_BAD_REQUEST)
